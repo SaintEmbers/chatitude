@@ -35,26 +35,20 @@
 			url:'http://chat.api.mks.io/signup',
 			data: {username: user,password:pass}
 			}).success(function(){
-
 				alert('You are a new user')
 			}).error(function(data){
-				console.log(error);
-				App.emit('fail');
+				alert('error:', data);
 			})
 		},
 		signin: function(user,pass){
-			console.log('works');
 			$.ajax({
 			type:'POST',
 			url:'http://chat.api.mks.io/signin',
 			data: {username: user ,password: pass}
 			}).success(function(api){
-				//console.log('logged in')
 				key=api;
 				localStorage.setItem("key",key['apiToken']);
-				//console.log(key)
-				App.emit('logged-in');
-			})
+			}).error()
 		},
 		
 		post:function(tweet){
@@ -79,7 +73,7 @@
 			
 		},
 		temp:function(){
-			console.log(key);
+			console.log(data);
 		}
 		//create login--get login ID
 		//post function
