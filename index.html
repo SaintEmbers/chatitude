@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script src="bower_components/jquery.js"></script>
+<script src= "minivents-master/minivents.js"></script>
+<script src="src/model.js"></script>
+<script src="src/MVP/presenter.js"type="text/javascript"></script>
+<link rel="styles.css"type="text/css"></script>
+</head>
+<body>
+<div class='forms'>
+	<div class='texts'>
+         <div class='texts'>
+	         Username:<br>
+	         <input type="text" name="username" id="username">
+          </div>
+          <div class = 'texts'>
+          password:<br>
+          <input type="text" name="lastname" id="password">
+          </div>
+          <button id='newuser'>New User</button><button id='olduser'>Old User</button>
+	</div>
+	<div>
+		<input type="text" name="username" id="message"><button id='send'>Send</button>
+	</div>
+</div>
+<div id="chatBox">
+</div>
+<script type="text/javascript">
+	var elem = $('#chatBox');
+	ChatControl.mount(elem);
+
+</script>
+
+</body>
+</html>
