@@ -39,6 +39,10 @@
 		   SignIn.Message();
 		   console.log('click')
 		})
+		setInterval(chatStorage.get, 20000);
+		App.on('posted', function(){
+			chatStorage.get();
+		})
 	}
 
 	window.SignIn = {};
